@@ -95,7 +95,7 @@ export default function Home() {
 								href="/shop"
 								defaultText="Shop Now"
 								hoverText="SHOP NOW"
-								className="bg-white text-black font-semibold text-sm md:text-base hover:bg-gray-100 transition-colors"
+								className="bg-white text-[#3D0B1C] font-semibold text-sm md:text-base hover:bg-gray-100 transition-colors"
 							>
 								<svg
 									className="w-4 h-4 ml-2"
@@ -135,7 +135,7 @@ export default function Home() {
 			</section>
 
 			{/* Bottom Navigation Bar */}
-			<nav className="fixed bottom-0 left-0 right-0 z-40 bg-white/10 backdrop-blur-xl border-t border-white/20 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
+			<nav className="fixed bottom-0 left-0 right-0 z-40 bg-[#F2CC7C]/10 backdrop-blur-xl border-t border-white/20 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="flex items-center justify-center space-x-8 md:space-x-12 h-16">
 						<a

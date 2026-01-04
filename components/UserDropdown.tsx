@@ -40,7 +40,7 @@ const UserDropdown = () => {
 		<div className="relative" ref={dropdownRef}>
 			<button
 				onClick={() => setIsOpen(!isOpen)}
-				className="p-2 text-black hover:text-gray-600 transition-colors"
+				className="p-2 text-[#F2CC7C] hover:text-gray-600 transition-colors"
 				aria-label="Account"
 				aria-expanded={isOpen}
 			>
@@ -94,11 +94,11 @@ const UserDropdown = () => {
 					</div>
 				) : (
 					<div className="p-4">
-						<h3 className="text-sm font-medium text-gray-900 mb-3">Welcome</h3>
+						<h3 className="text-sm font-medium text-[#3D0B1C] mb-3">Welcome</h3>
 						<div className="space-y-2">
 							<Link
 								href="/auth/login"
-								className="block w-full text-center px-4 py-2 text-sm text-white bg-black hover:bg-gray-800 rounded-md transition-colors"
+								className="block w-full text-center px-4 py-2 text-sm text-white bg-[#3D0B1C] hover:bg-gray-800 rounded-md transition-colors"
 								onClick={() => setIsOpen(false)}
 							>
 								Sign In
@@ -107,7 +107,7 @@ const UserDropdown = () => {
 								New customer?{' '}
 								<Link
 									href="/auth/register"
-									className="text-black hover:underline"
+									className="text-[#3D0B1C] hover:underline"
 									onClick={() => setIsOpen(false)}
 								>
 									Register

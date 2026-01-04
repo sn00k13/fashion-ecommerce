@@ -159,14 +159,14 @@ export default function RegisterPage() {
 		<div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
 			<div className="max-w-md w-full space-y-8 bg-white p-8 rounded-xl shadow-lg">
 				<div className="text-center">
-					<h2 className="mt-6 text-3xl font-extrabold text-gray-900">
+					<h2 className="mt-6 text-3xl font-extrabold text-[#3D0B1C]">
 						Create your account
 					</h2>
 					<p className="mt-2 text-sm text-gray-600">
 						Already have an account?{' '}
 						<Link
 							href="/auth/login"
-							className="font-medium text-[#eb6404] hover:text-[#d45703]"
+							className="font-medium text-[#3D0B1C] hover:text-[#d45703]"
 						>
 							Sign in
 						</Link>
@@ -196,7 +196,7 @@ export default function RegisterPage() {
 									required
 									value={formData.firstName}
 									onChange={handleChange}
-									className="appearance-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-[#eb6404] focus:border-[#eb6404] focus:z-10 sm:text-sm"
+									className="appearance-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-[#3D0B1C] focus:border-[#3D0B1C] focus:z-10 sm:text-sm"
 									placeholder="First name"
 								/>
 							</div>
@@ -211,7 +211,7 @@ export default function RegisterPage() {
 									required
 									value={formData.lastName}
 									onChange={handleChange}
-									className="appearance-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-[#eb6404] focus:border-[#eb6404] focus:z-10 sm:text-sm"
+									className="appearance-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-[#3D0B1C] focus:border-[#3D0B1C] focus:z-10 sm:text-sm"
 									placeholder="Last name"
 								/>
 							</div>
@@ -229,7 +229,7 @@ export default function RegisterPage() {
 								required
 								value={formData.email}
 								onChange={handleChange}
-								className="appearance-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-[#eb6404] focus:border-[#eb6404] focus:z-10 sm:text-sm"
+								className="appearance-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-[#3D0B1C] focus:border-[#3D0B1C] focus:z-10 sm:text-sm"
 								placeholder="Email address"
 							/>
 						</div>
@@ -246,7 +246,7 @@ export default function RegisterPage() {
 								required
 								value={formData.password}
 								onChange={handleChange}
-								className="appearance-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-[#eb6404] focus:border-[#eb6404] focus:z-10 sm:text-sm"
+								className="appearance-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-[#3D0B1C] focus:border-[#3D0B1C] focus:z-10 sm:text-sm"
 								placeholder="Password (min 6 characters)"
 							/>
 						</div>
@@ -263,7 +263,7 @@ export default function RegisterPage() {
 								required
 								value={formData.confirmPassword}
 								onChange={handleChange}
-								className="appearance-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-[#eb6404] focus:border-[#eb6404] focus:z-10 sm:text-sm"
+								className="appearance-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-[#3D0B1C] focus:border-[#3D0B1C] focus:z-10 sm:text-sm"
 								placeholder="Confirm password"
 							/>
 						</div>
@@ -275,20 +275,20 @@ export default function RegisterPage() {
 							name="terms"
 							type="checkbox"
 							required
-							className="h-4 w-4 text-[#eb6404] focus:ring-[#eb6404] border-gray-300 rounded"
+							className="h-4 w-4 text-[#eb6404] focus:ring-[#3D0B1C] border-gray-300 rounded"
 						/>
 						<label htmlFor="terms" className="ml-2 block text-sm text-gray-700">
 							I agree to the{' '}
 							<Link
 								href="/terms"
-								className="text-[#eb6404] hover:text-[#d45703]"
+								className="text-[#eb6404] hover:text-[#3D0B1C]"
 							>
 								Terms of Service
 							</Link>{' '}
 							and{' '}
 							<Link
 								href="/privacy"
-								className="text-[#eb6404] hover:text-[#d45703]"
+								className="text-[#eb6404] hover:text-[#3D0B1C]"
 							>
 								Privacy Policy
 							</Link>
@@ -299,7 +299,10 @@ export default function RegisterPage() {
 						<Button
 							type="submit"
 							disabled={loading}
-							className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-[#eb6404] hover:bg-[#d45703] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#eb6404] disabled:opacity-50 disabled:cursor-not-allowed"
+							className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-[#3D0B1C] hover:bg-[#3D0B1C]/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#eb6404] disabled:opacity-50 disabled:cursor-not-allowed
+    							transition-all duration-200 ease-in-out
+    							hover:scale-[1.03] hover:shadow-[0_4px_12px_rgba(0,0,0,0.1)]
+    							active:scale-[0.98] active:duration-150"
 						>
 							{loading ? 'Creating account...' : 'Create account'}
 						</Button>
