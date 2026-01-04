@@ -1,0 +1,39 @@
+.animate {
+	font-size: 50px;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.animate span {
+	display: inline-block;
+	opacity: 0;
+	transform: translate(-300px, 0) scale(0);
+	animation: sideSlide 0.5s forwards;
+	animation-delay: calc(0.05s * var(--index));
+	color: #fff;
+}
+
+@keyframes sideSlide {
+	60% {
+		transform: translate(20px, 0) scale(1);
+		color: #fff;
+	}
+
+	80% {
+		transform: translate(20px, 0) scale(1);
+		color: #fff;
+	}
+
+	99% {
+		transform: translate(0) scale(1.2);
+		color: #eb6404;
+	}
+
+	100% {
+		transform: translate(0) scale(1);
+		opacity: 1;
+		color: #fff;
+	}
+}

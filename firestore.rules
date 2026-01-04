@@ -1,0 +1,48 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow public read access to products
+    match /products/{productId} {
+      allow read: if true;  // Anyone can read products
+      allow create, update, delete: if request.auth != null && request.auth.token.admin == true;  // Only admins can modify products
+    }
+
+    // User-specific data
+    match /users/{userId} {
+      // Users can read/write their own data
+      allow read, update, delete: if request.auth != null && request.auth.uid == userId;
+      // Only allow creating user documents for the current user
+      allow create: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // Orders collection
+    match /orders/{orderId} {
+      // Users can read their own orders
+      allow read: if request.auth != null && request.auth.uid == resource.data.userId;
+      // Users can create orders for themselves
+      allow create: if request.auth != null && 
+                   request.resource.data.userId == request.auth.uid &&
+                   request.resource.data.createdAt == request.time;
+      
+      // Prevent updates and deletes after creation
+      allow update, delete: if false;
+    }
+
+    // Cart collection (user-specific)
+    match /carts/{userId} {
+      // Users can only access their own cart
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // Categories (public read, admin write)
+    match /categories/{categoryId} {
+      allow read: if true;
+      allow write: if request.auth != null && request.auth.token.admin == true;
+    }
+
+    // Default deny all other operations
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

@@ -1,0 +1,118 @@
+.button {
+	-webkit-tap-highlight-color: transparent;
+	-webkit-appearance: button;
+	appearance: button;
+	background: white;
+	border: 1px solid #d7d7d7;
+	border-radius: 9999px;
+	color: #000;
+	cursor: pointer;
+	display: inline-flex;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		'Helvetica Neue', Arial, sans-serif;
+	font-size: 0.9rem;
+	font-weight: 700;
+	height: 50px;
+	justify-content: center;
+	line-height: 1.25;
+	min-width: 140px;
+	overflow: hidden;
+	padding: 0 1.5rem;
+	position: relative;
+	text-decoration: none;
+	text-transform: uppercase;
+	-webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+	mask-image: radial-gradient(#000, #fff);
+}
+
+.button:disabled {
+	cursor: default;
+	opacity: 0.7;
+}
+
+.content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	position: relative;
+	width: 100%;
+}
+
+.default,
+.hover {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: transform 0.3s ease;
+	gap: 0.5rem;
+	padding: 0 1.5rem;
+	box-sizing: border-box;
+}
+
+.hover {
+	transform: translateY(100%);
+	background: white;
+}
+
+.letters {
+	display: flex;
+	align-items: center;
+}
+
+.letter {
+	display: inline-block;
+	opacity: 0;
+	transform: translateY(15px);
+	transition: all 0.3s ease;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	transition: transform 0.3s ease;
+}
+
+.button:hover .default {
+	transform: translateY(-100%);
+}
+
+.button:hover .hover {
+	transform: translateY(0);
+}
+
+.button:hover .letter {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* Staggered animation for letters */
+.button:hover .letter:nth-child(1) {
+	transition-delay: 0.05s;
+}
+.button:hover .letter:nth-child(2) {
+	transition-delay: 0.1s;
+}
+.button:hover .letter:nth-child(3) {
+	transition-delay: 0.15s;
+}
+.button:hover .letter:nth-child(4) {
+	transition-delay: 0.2s;
+}
+.button:hover .letter:nth-child(5) {
+	transition-delay: 0.25s;
+}
+.button:hover .letter:nth-child(6) {
+	transition-delay: 0.3s;
+}
+.button:hover .letter:nth-child(7) {
+	transition-delay: 0.35s;
+}
+.button:hover .letter:nth-child(8) {
+	transition-delay: 0.4s;
+}
